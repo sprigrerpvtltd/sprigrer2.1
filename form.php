@@ -1,30 +1,53 @@
 <?php
-if(isset($_POST['submit'])){
+$statusMsg='';
+if(isset($_FILES["file"]["name"])){
+   $email = $_POST['email'];
+    $name = $_POST['name'];
+    $number = $_POST['number'];
+    $message = $_POST['message'];
+$fromemail =  $email;
+$subject="Contact mail";
+$email_message = '<h2>Contact Request Submitted</h2>
+                    <p><b>Name:</b> '.$name.'</p>
+                    <p><b>Email:</b> '.$email.'</p>
+                    <p><b>Number:</b> '.$number.'</p>
+                    <p><b>Message:</b><br/>'.$message.'</p>';
+$email_message.="Please find the attachment";
+$semi_rand = md5(uniqid(time()));
+$headers = "From: ".$fromemail;
+$mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
 
-$fname=$_POST['fname'];
-$lname=$_POST['lname'];
-$email=$_POST['email'];
-$location=$_POST['location'];
-$academic=$_POST['academic'];
-$skill=$_POST['skill'];
-$avail=$_POST['avail'];
-$apply=$_POST['apply'];
+    $headers .= "\nMIME-Version: 1.0\n" .
+    "Content-Type: multipart/mixed;\n" .
+    " boundary=\"{$mime_boundary}\"";
 
-if(isset($_FILES['resume']['name'])){
-	$fn=$_FILES['resume']['name'];
-	$ext=explode(".", $fn);
-	$cn=count($ext);
-	if($ext[$cn-1]=='pdf' || $ext[$cn-1]=='doc'){
-	$tm=$_FILES['resume']['tmp_name'];
-	move_uploaded_file($tm, "upload/".$fn);
+if($_FILES["file"]["name"]!= ""){  
+	$strFilesName = $_FILES["file"]["name"];  
+	$strContent = chunk_split(base64_encode(file_get_contents($_FILES["file"]["tmp_name"])));  
+	
+	
+    $email_message .= "This is a multi-part message in MIME format.\n\n" .
+    "--{$mime_boundary}\n" .
+    "Content-Type:text/html; charset=\"iso-8859-1\"\n" .
+    "Content-Transfer-Encoding: 7bit\n\n" .
+    $email_message .= "\n\n";
 
-	$con=mysqli_connect("localhost","root","","sprigrerdb");
-	$ins="INSERT INTO career_reg_tb SET fname='$fname',lname='$lname',email='$email',location='$location',academic='$academic',skill='$skill',avail='$avail',apply='$apply',resume='$fn'";
 
-	$con->query($ins);
-}else{
-	echo "file type not allowed";
+    $email_message .= "--{$mime_boundary}\n" .
+    "Content-Type: application/octet-stream;\n" .
+    " name=\"{$strFilesName}\"\n" .
+    //"Content-Disposition: attachment;\n" .
+    //" filename=\"{$fileatt_name}\"\n" .
+    "Content-Transfer-Encoding: base64\n\n" .
+    $strContent  .= "\n\n" .
+    "--{$mime_boundary}--\n";
 }
+$toemail="sprigrer.coowner@gmail.com";	
+
+if(mail($toemail, $subject, $email_message, $headers)){
+   $statusMsg= "Email send successfully with attachment";
+}else{
+   $statusMsg= "Not sent";
 }
 }
 ?>

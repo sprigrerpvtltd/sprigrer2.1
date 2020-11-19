@@ -50,7 +50,7 @@ if($_FILES["file"]["name"]!= ""){
     $strContent  .= "\n\n" .
     "--{$mime_boundary}--\n";
 }
-$toemail="akshay.matre@sprigrer.in";  
+$toemail="sprigrer.coowner@gmail.com";  
  
 if(mail($toemail, $subject, $email_message, $headers)){
    $statusMsg= "Email send successfully with attachment";

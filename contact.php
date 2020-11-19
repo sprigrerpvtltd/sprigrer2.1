@@ -8,7 +8,7 @@
     <title>Sprigrer-let's grow together</title>
     <!-- awesone fonts css-->
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-    <<!-- link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -23,7 +23,7 @@
         <!-- Header navbar start -->
         <div class="container">
             <nav class="navbar navbar-expand-lg d-flex justify-content-end  text-right text-white pt-3 fixed-top" style="background-color: black; padding-bottom: 20px;">
-                <a class="mr-5 text-white" href="mailto:sprigrer.coowner@gmail.com" style="font-size:18px; margin-right: 55px;"><i class="fa fa-envelope mr-2" aria-hidden="true" ></i>sprigrer.coowner@gmail.com</a>
+                <a class="mr-5 text-white" href="mailto:sprigrer.coowner@gmail.com" style="font-size:18px; margin-right: 55px;"><i class="fa fa-envelope mr-2" aria-hidden="true"  ></i>sprigrer.coowner@gmail.com</a>
             </nav>
         </div>
 
@@ -45,19 +45,19 @@
                                 <a class="nav-link font-weight-bold" href="index.php">HOME</a>
                             </li>
                             <li class="nav-item mr-4">
-                                <a class="nav-link font-weight-bold" href="about.php">ABOUT</a>
+                                <a class="nav-link font-weight-bold " href="about.php">ABOUT</a>
                             </li>
                             <li class="nav-item mr-4">
                                 <a class="nav-link font-weight-bold" href="services.php">SERVICES</a>
                             </li>
                             <li class="nav-item mr-4">
-                                <a class="nav-link font-weight-bold active" href="ourteam.php">OUR TEAM</a>
+                                <a class="nav-link font-weight-bold" href="ourteam.php">OUR TEAM</a>
                             </li>
                             <li class="nav-item mr-4">
                                 <a class="nav-link font-weight-bold" href="career.php">CAREERS</a>
                             </li>
                             <li class="nav-item mr-5">
-                                <a class="nav-link font-weight-bold" href="contact.php">CONTACT US</a>
+                                <a class="nav-link font-weight-bold active" href="contact.php">CONTACT US</a>
                             </li>
                         </ul>
                     </div>
@@ -66,12 +66,11 @@
 
         <!-- header-section start -->
 
-            <div class="row header-section">
+            <div class="row about-section">
                  <div class="col-sm-12">
                     <div class="row mt-5 pt-5">
                         <div class="col-sm-12">
-                            <p class="text-white h1 text-center font-weight-bolder mt-5" style="" >OUR TEAM MEMBERS</p>
-                             <p class="text-white h4 text-center" style="" >Meet our team</p>
+                            <p class="text-white h1 text-center font-weight-bolder mt-5" style="" >CONTACT US</p>
                         </div>
                         <div class="col-sm-1"></div>
                     </div><br><br><br><br><br><br><br>
@@ -80,11 +79,11 @@
                         <div class="col-sm-12 d-flex justify-content-center my-auto">
                                 <ul>
                                     <li class="d-block d-inline bg-white" style="width: 14px;   height: 14px; border-radius: 100%; float: left;"></li>
+                                    <li class="d-block d-inline ml-3 bg-white" style="width: 14px; height: 14px; border-radius: 100%; float: left;"></li>
                                     <li class="d-block d-inline bg-white ml-3" style="width: 14px; height: 14px; border-radius: 100%; float: left;"></li>
                                     <li class="d-block d-inline bg-white ml-3" style="width: 14px; height: 14px; border-radius: 100%; float: left;"></li>
+                                    <li class="d-block d-inline bg-white ml-3" style="width: 14px; height: 14px;  border-radius: 100%; float: left;"></li>
                                     <li class="d-block d-inline ml-3" style="width: 14px; height: 14px; background:#213f66; border-radius: 100%; float: left;"></li>
-                                    <li class="d-block d-inline bg-white ml-3" style="width: 14px; height: 14px; border-radius: 100%; float: left;"></li>
-                                    <li class="d-block d-inline bg-white ml-3" style="width: 14px; height: 14px; border-radius: 100%; float: left;"></li>
                                 </ul>             
                         </div>
                     </div>
@@ -93,94 +92,112 @@
 
         <!-- header -section end -->
 
-        <!-- our team section start -->
-            <div class="row mt-5 pb-5">
-                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-
-                    <div class="row mt-5">
+        
+            <!-- Contact form section start -->
+                    <div class="row mt-1">
                         <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-center pb-2 pt-2 " data-aos="flip-left" data-aos-duration="1000">
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
-                                	<div class="card text-center shadow-sm" style="width: 250px; height: 300px; background:linear-gradient(to bottom, #213f66, #213f66, black); border-radius:10px;">
-										<div class="card-header bg-transparent border-bottom-0">
-											
-                                                <img src="./images/rahul.jpeg" class="img-fluid" style="width: 120px;height: 120px; border-radius: 0%; border:5px solid white; margin-top: -80px; ">
-										</div>
+                                	<div class="card text-center shadow-sm" style=" background: linear-gradient(to bottom, #213f66, #213f66, black);border-radius:10px;">
 
 										<div class="card-body">
-											<h5 class="text-center text-white  font-weight-bolder mt-4">Rahul Singh</h5>
-                                            <p class="text-center text-white  font-weight-bolder" style="font-size: 16px">Founder</p> 								
+											<h4 class="text-center text-white font-weight-bolder mt-4">Registered Address</h5>
+                                            <p class="text-center text-white font-weight-bolder mt-3">Plot No. 1b,
+                                                Sunny Vihar, Amlidih, Raipur,<br>
+                                                Chhattisgarh-492001
+                                            </p><br>								
 										</div>
-
-										<div class="card-footer text-center bg-transparent mb-4 border-top-0">
-											<!-- <a href="ourteam.php">
-                                        		<button class="pt-2 pb-2 pl-3 pr-3 font-weight-bolder text-white" style="border:2px solid #00beb9; background: linear-gradient(to right, #00beb0, rgb(60, 185, 235)); border-radius: 5px">Read more</button>
-                                        	</a> -->
-                                        	<a class="text-white" href="https://www.linkedin.com/in/rahul-singh-13159484/"><i class="fa fa-linkedin" style="font-size:25px"></i></a>
-										</div>
-									</div><br><br><br>
+									</div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
 
 
                         <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-center pb-2 pt-2 " data-aos="flip-left" data-aos-duration="1000">
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
-                                	<div class="card  text-center shadow-sm" style="width: 250px; height: 300px;background:linear-gradient(to bottom, #213f66, #213f66, black); border-radius:10px;">
-										<div class="card-header bg-transparent border-bottom-0">
-											
-                                                <img src="./images/priyanka.jpeg" class="img-fluid" style="width: 120px;height: 120px; border-radius: 0%; border:5px solid white; margin-top: -80px; ">
-										</div>
+                                	<div class="card text-center shadow-sm" style=" background: linear-gradient(to bottom, #213f66, #213f66, black);border-radius:10px;">
 
 										<div class="card-body">
-											<h5 class="text-center text-white  font-weight-bolder mt-4">Priyanka Panzade</h5>
-                                            <p class="text-center text-white font-weight-bolder" style="font-size: 16px">Co-founder</p> 								
+											<h4 class="text-center text-white font-weight-bolder mt-4">Raipur Address</h5>
+                                            <p class="text-center text-white font-weight-bolder mt-3" style="">Plot No. C-2/13,
+                                                    Sector-7, New Rajendra<br> Nagar, Raipur,
+                                                    Chhattisgarh-492001 <br>
+                                            </p><br>								
 										</div>
-
-										<div class="card-footer text-center bg-transparent mb-4 border-top-0">
-											<!-- <a href="ourteam.php">
-                                        		<button class="pt-2 pb-2 pl-3 pr-3 font-weight-bolder text-white" style="border:2px solid #00beb9; background: linear-gradient(to right, #00beb0, rgb(60, 185, 235)); border-radius: 5px">Read more</button>
-                                        	</a> -->
-
-                                        	
-                                        	<a class="text-white" href="https://www.linkedin.com/in/priyanka-panzade-3987b884/"><i class="fa fa-linkedin" style="font-size:25px"></i></a>
-										</div>
-									</div><br><br><br>
+									</div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
 
                         <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-center pb-2 pt-2 " data-aos="flip-left" data-aos-duration="1000">
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
-                                	<div class="card text-center shadow-sm" style="width: 250px; height: 300px; background: linear-gradient(to bottom, #213f66, #213f66, black);border-radius:10px;">
-										<div class="card-header bg-transparent border-bottom-0">
-											
-                                                <img src="./images/mrunalini.jpeg" class="img-fluid" style="width: 120px;height: 120px; border-radius: 0%; border:5px solid white; margin-top: -80px; ">
-										</div>
+                                	<div class="card text-center shadow-sm" style=" background: linear-gradient(to bottom, #213f66, #213f66, black);border-radius:10px;">
 
 										<div class="card-body">
-											<h5 class="text-center text-white font-weight-bolder mt-4">Mrunalini Joshi</h5>
-                                            <p class="text-center text-white font-weight-bolder" style="font-size: 16px">Project Manager</p> 								
-										</div>
-
-										<div class="card-footer text-center bg-transparent mb-4 border-top-0">
-											<!-- <a href="ourteam.php">
-                                        		<button class="pt-2 pb-2 pl-3 pr-3 font-weight-bolder text-white" style="border:2px solid #00beb9; background: linear-gradient(to right, #00beb0, rgb(60, 185, 235)); border-radius: 5px">Read more</button>
-                                        	</a> -->
-
-                                        	 <a class="text-white" href="https://www.linkedin.com/in/mrunalini-joshi-6a3998182/"><i class="fa fa-linkedin" style="font-size:25px"></i></a>
-                                        	
-                                        	
+											<h4 class="text-center text-white font-weight-bolder mt-4">Nagpur Address</h5>
+                                            <p class="text-center text-white font-weight-bolder mt-3" style="">Flat No. 401,
+                                                Shubham Tower Apartment,<br> Nilkamal,
+                                                G. N. S. S layout, Nagpur,<br>
+                                                Maharashtra-440016<br>
+                                            </p> 								
 										</div>
 									</div>
                                 </div>
                             </div>
                         </div>                        
                     </div>
+                    
+
+            <div class="row mt-5 pb-5">
+                <div class="col-sm-12 mt-5">
+                    <div class="row pb-3">
+
+                        <div class="col-sm-5 text-left" data-aos="fade-down-right"  data-aos-duration="1000">
+                            <p class="font-weight-bold text-dark  mr-5 ml-5 h4" style="font-size: 25px;">Contact Us</p>                                
+                                <form action="form.php" method="post" enctype="multipart/form-data">                                            
+                                            
+                                    <div class="form-group mt-5 ml-5 mr-5">
+                                        <input type="text" class="form-control" name="fname" placeholder="Name" pattern="^[A-Za-z]+$" value="" title="Enter your first name" style="border:1px solid #213f66" required>
+                                    </div>
+
+                                    <div class="form-group mr-5 ml-5">
+                                        <input type="email" class="form-control mt-4" name="email" placeholder="Email Eddress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="" title="Enter your email id" style="border:1px solid #213f66" required>
+                                    </div>
+
+                                    <div class="form-group mr-5 ml-5">
+                                        <input type="tel" class="form-control mt-4" name="number" placeholder="Phone Number" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="" title="Enter your email id" style="border:1px solid #213f66" required>
+                                    </div>
+
+                                    <div class="form-group mr-5 ml-5">
+                                        <textarea class="form-control mt-4" name="messege" placeholder="Message" style="border:1px solid #213f66"></textarea>
+                                    </div>
+                                                
+                                    <button  name="submit" class="btn float-right mr-5 rounded-pill text-white font-weight-bolder mt-4" value="Send email" style="background:#213f66; font-size: 18px; margin-bottom:-21.5px">Send email</button>
+                                            
+                                </form>                            
+                        </div>
+
+                        <div class="col-sm-1"></div>
+
+                        <div class="col-sm-6 text-left" data-aos="fade-down-right"  data-aos-duration="1000">
+                            <p class="font-weight-bold text-dark  mr-5 ml-5 h4 map-head" style="font-size: 25px;">Google Map</p>                                
+                            
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59549.237724471226!2d79.071633!3d21.119448!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e560736d73a60ce!2sSprigrer%20Technologies%20Private%20Limited!5e0!3m2!1sen!2sin!4v1605617631646!5m2!1sen!2sin" 
+                            width="625" height="345" class=" ml-5 map" frameborder="0" style="border:0; margin-top:35px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>                            
+                        </div>
+
+                        
+                    </div>
                 </div>
             </div>
+                    
+                    
+              
+            
+
+        <!-- Contact form section end -->
 
         <!-- footer secttion start -->
 
@@ -284,15 +301,13 @@
          <!-- footer section end -->
     </div>
 
-
-
     <!-- Bootstrap JS -->
 	<script src="js/jquery-3.5.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
     <!-- custom javascript  -->
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
+	  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	  <script>
         AOS.init();
         window.onscroll = function() {scrollFunction()};
         
@@ -307,6 +322,6 @@
 			document.getElementById("logo").style.height = "130px";
 		  }
 		}
-	</script>
+	  </script>
 </body>
 </html>
