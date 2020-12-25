@@ -23,7 +23,7 @@
         <!-- Header navbar start -->
         <div class="container">
             <nav class="navbar navbar-expand-lg d-flex justify-content-end  text-right text-white pt-3 fixed-top" style="background-color: black; padding-bottom: 20px;">
-                <a class="mr-5 text-white" href="mailto:sprigrer.coowner@gmail.com" style="font-size:18px; margin-right: 55px;"><i class="fa fa-envelope mr-2" aria-hidden="true"  ></i>sprigrer.coowner@gmail.com</a>
+                <a class="mr-5 text-white" href="mailto:sprigrer.coowner@sprigrer.in" style="font-size:18px; margin-right: 55px;"><i class="fa fa-envelope mr-2" aria-hidden="true"  ></i>sprigrer.coowner@sprigrer.in</a>
             </nav>
         </div>
 
@@ -97,7 +97,7 @@
         
             <div class="row mt-5" >
                 <div class="col-sm-12">
-                    <h5 class=" ml-5 mr-5 mt-5 h5">A Dynamic professional solution seeker in the challenging virtual global market in order to enhance innovative product based imagination to reality in the routine user friendly environment and building career for next generation to become experts in various domains by becoming competent in the global skill based challenge.</h5>
+                    <h5 class=" ml-5 mr-5 mt-5 h5">A dynamic professional solution seeker in the challenging virtual global market in order to enhance innovative product based imagination to reality in the routine user friendly environment and building career for next generation to become experts in various domains by becoming competent in the global skill based challenge.</h5>
                 </div>  
             </div>
 
@@ -120,7 +120,7 @@
 				</div>
                 <div class="col-sm-6" data-aos="fade-up-left"  data-aos-duration="1000">
                      <h2 class="font-weight-bolder text-left ml-5" style="color:#213f66;">MISSION</h2>
-                    <p class="text-left mt-2 h5 ml-5 mr-5" style="line-height:1.4;">A Growing with emerging advancement at global market as a service based software company for transforming virtual global market at affordable expense by providing technological advancement in the user friendly atmosphere ,building honest Professional relationship with our customers as our prime motivate. </p>
+                    <p class="text-left mt-2 h5 ml-5 mr-5" style="line-height:1.4;">A growing with emerging advancement at global market as a service based software company for transforming virtual global market at affordable expense by providing technological advancement in the user friendly atmosphere, building honest professional relationship with our customers as our prime motivate. </p>
                 </div>  
 
                 
@@ -148,7 +148,7 @@
                     <ul class="mt-2">
                         <li class="ml-5 mr-5">
                             <p class="text-left h5  " style="line-height:1.4;">
-                                Developing user friendly software at affordable cost and honest commitment to deal with real time challenge accomplishment with punctuality as Establishing a dedicated team of responsible task handlers to deal with complex software implementation challenges.
+                                Developing user friendly software at affordable cost and honest commitment to deal with real time challenge accomplishment with punctuality as establishing a dedicated team of responsible task handlers to deal with complex software implementation challenges.
                             </p>
                         </li>
 
@@ -195,11 +195,11 @@
 				<div class="col-sm-3 mt-5">
                     <div class="ml-5 mr-5">
                         <p class="font-weight-bold text-white " style="font-size: 25px;">Contact Us</p>
-                            <p class="text-white mt-5 p-1" style="font-size:16px;"><i class="fa fa-phone mr-1" aria-hidden="true"></i> (+91) 899-971-2118</p>
-                            <p>
-                                <a href="mailto:sprigrer.coowner@gmail.com" class="text-white p-1" style="font-size:16px;"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> sprigrer.coowner@gmail.com
+                            <p class="mt-5">
+                                <a href="mailto:sprigrer.coowner@sprigrer.in" class="text-white p-1" style="font-size:16px;"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> sprigrer.coowner@sprigrer.in
                                 </a>
                             </p>
+                            <!-- <p class="text-white mt-5 p-1" style="font-size:16px;"><i class="fa fa-phone mr-1" aria-hidden="true"></i> (+91) 899-971-2118</p> -->
                         <p class="font-weight-bold text-white mt-5" style="font-size: 25px;">Follow Us</p>
 
                         <div class="d-flex justify-content-start">
@@ -283,7 +283,7 @@
 
             <div class="row border border-left-0 border-right-0 border-bottom-0 border-top border-dark  pt-4 "  style="background:linear-gradient(to bottom, #0c2748 100%, #0c2748 100%, black 100%">
                 <div class="col-sm-12">
-                    <p class="text-center text-white   font-weight-bolder small">Copyright &copy;  2020 All Right Reserved. Design By Sprigrer Technologies Private Limited
+                    <p class="text-center text-white   font-weight-bolder small">Copyright &copy;  2020 All Right Reserved. Design By Sprigrer Technologies Private Limited.
                     </p>
                 </div>
             </div>

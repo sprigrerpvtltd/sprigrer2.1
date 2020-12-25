@@ -1,3 +1,23 @@
+<?php
+$statusMsg='';
+if(isset($_POST['submit'])){
+    $to = "sprigrer.coowner@sprigrer.in"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['name'];
+    $last_name = $_POST['number'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name .  "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +43,7 @@
         <!-- Header navbar start -->
         <div class="container">
             <nav class="navbar navbar-expand-lg d-flex justify-content-end  text-right text-white pt-3 fixed-top" style="background-color: black; padding-bottom: 20px;">
-                <a class="mr-5 text-white" href="mailto:sprigrer.coowner@gmail.com" style="font-size:18px; margin-right: 55px;"><i class="fa fa-envelope mr-2" aria-hidden="true"  ></i>sprigrer.coowner@gmail.com</a>
+                <a class="mr-5 text-white" href="mailto:sprigrer.coowner@sprigrer.in" style="font-size:18px; margin-right: 55px;"><i class="fa fa-envelope mr-2" aria-hidden="true"  ></i>sprigrer.coowner@sprigrer.in</a>
             </nav>
         </div>
 
@@ -152,32 +172,37 @@
 
             <div class="row mt-5 pb-5">
                 <div class="col-sm-12 mt-5">
+                     <!-- Display submission status -->
+                                    <?php if(!empty($statusMsg)){ ?>
+                                        <?php echo'<script>alert("We will contact you shortly")</script>' ?>
+                                    <?php } ?>
                     <div class="row pb-3">
 
                         <div class="col-sm-5 text-left" data-aos="fade-down-right"  data-aos-duration="1000">
                             <p class="font-weight-bold text-dark  mr-5 ml-5 h4" style="font-size: 25px;">Contact Us</p>                                
-                                <form action="form.php" method="post" enctype="multipart/form-data">                                            
+                                <form action="" method="post" >                                            
                                             
                                     <div class="form-group mt-5 ml-5 mr-5">
-                                        <input type="text" class="form-control" name="fname" placeholder="Name" pattern="^[A-Za-z]+$" value="" title="Enter your first name" style="border:1px solid #213f66" required>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Name" pattern="^[A-Za-z]+$" value="" title="Enter your first name" style="border:1px solid #213f66" required>
                                     </div>
 
                                     <div class="form-group mr-5 ml-5">
-                                        <input type="email" class="form-control mt-4" name="email" placeholder="Email Eddress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="" title="Enter your email id" style="border:1px solid #213f66" required>
+                                        <input type="email" class="form-control mt-4" name="email" id="email" placeholder="Email Eddress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="" title="Enter your email id" style="border:1px solid #213f66" required>
                                     </div>
 
                                     <div class="form-group mr-5 ml-5">
-                                        <input type="tel" class="form-control mt-4" name="number" placeholder="Phone Number" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="" title="Enter your email id" style="border:1px solid #213f66" required>
+                                        <input type="text" class="form-control mt-4" name="number" id="number" placeholder="Phone Number"  value="" title="Enter your mobile number" style="border:1px solid #213f66" required>
                                     </div>
 
                                     <div class="form-group mr-5 ml-5">
-                                        <textarea class="form-control mt-4" name="messege" placeholder="Message" style="border:1px solid #213f66"></textarea>
+                                        <textarea class="form-control mt-4" name="message" id="message" placeholder="Message" style="border:1px solid #213f66"></textarea>
                                     </div>
                                                 
                                     <button  name="submit" class="btn float-right mr-5 rounded-pill text-white font-weight-bolder mt-4" value="Send email" style="background:#213f66; font-size: 18px; margin-bottom:-21.5px">Send email</button>
                                             
                                 </form>                            
                         </div>
+                        
 
                         <div class="col-sm-1"></div>
 
@@ -206,11 +231,11 @@
 				<div class="col-sm-3 mt-5">
                     <div class="ml-5 mr-5">
                         <p class="font-weight-bold text-white " style="font-size: 25px;">Contact Us</p>
-                            <p class="text-white mt-5 p-1" style="font-size:16px;"><i class="fa fa-phone mr-1" aria-hidden="true"></i> (+91) 899-971-2118</p>
-                            <p>
-                                <a href="mailto:sprigrer.coowner@gmail.com" class="text-white p-1" style="font-size:16px;"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> sprigrer.coowner@gmail.com
+                            <p class="mt-5">
+                                <a href="mailto:sprigrer.coowner@sprigrer.in" class="text-white p-1" style="font-size:16px;"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> sprigrer.coowner@sprigrer.in
                                 </a>
                             </p>
+                            <!-- <p class="text-white mt-5 p-1" style="font-size:16px;"><i class="fa fa-phone mr-1" aria-hidden="true"></i> (+91) 899-971-2118</p> -->
                         <p class="font-weight-bold text-white mt-5" style="font-size: 25px;">Follow Us</p>
 
                         <div class="d-flex justify-content-start">
@@ -294,7 +319,7 @@
 
             <div class="row border border-left-0 border-right-0 border-bottom-0 border-top border-dark  pt-4 "  style="background:linear-gradient(to bottom, #0c2748 100%, #0c2748 100%, black 100%">
                 <div class="col-sm-12">
-                    <p class="text-center text-white   font-weight-bolder small">Copyright &copy;  2020 All Right Reserved. Design By Sprigrer Technologies Private Limited
+                    <p class="text-center text-white   font-weight-bolder small">Copyright &copy;  2020 All Right Reserved. Design By Sprigrer Technologies Private Limited.
                     </p>
                 </div>
             </div>

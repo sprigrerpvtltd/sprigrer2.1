@@ -1,53 +1,19 @@
-<?php
-$statusMsg='';
-if(isset($_FILES["file"]["name"])){
-   $email = $_POST['email'];
-    $name = $_POST['name'];
-    $number = $_POST['number'];
-    $message = $_POST['message'];
-$fromemail =  $email;
-$subject="Contact mail";
-$email_message = '<h2>Contact Request Submitted</h2>
-                    <p><b>Name:</b> '.$name.'</p>
-                    <p><b>Email:</b> '.$email.'</p>
-                    <p><b>Number:</b> '.$number.'</p>
-                    <p><b>Message:</b><br/>'.$message.'</p>';
-$email_message.="Please find the attachment";
-$semi_rand = md5(uniqid(time()));
-$headers = "From: ".$fromemail;
-$mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
+<?php 
+if(isset($_POST['submit'])){
+    $to = "akshay.matre@sprigrer.in"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['name'];
+    $last_name = $_POST['number'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name .  "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
 
-    $headers .= "\nMIME-Version: 1.0\n" .
-    "Content-Type: multipart/mixed;\n" .
-    " boundary=\"{$mime_boundary}\"";
-
-if($_FILES["file"]["name"]!= ""){  
-	$strFilesName = $_FILES["file"]["name"];  
-	$strContent = chunk_split(base64_encode(file_get_contents($_FILES["file"]["tmp_name"])));  
-	
-	
-    $email_message .= "This is a multi-part message in MIME format.\n\n" .
-    "--{$mime_boundary}\n" .
-    "Content-Type:text/html; charset=\"iso-8859-1\"\n" .
-    "Content-Transfer-Encoding: 7bit\n\n" .
-    $email_message .= "\n\n";
-
-
-    $email_message .= "--{$mime_boundary}\n" .
-    "Content-Type: application/octet-stream;\n" .
-    " name=\"{$strFilesName}\"\n" .
-    //"Content-Disposition: attachment;\n" .
-    //" filename=\"{$fileatt_name}\"\n" .
-    "Content-Transfer-Encoding: base64\n\n" .
-    $strContent  .= "\n\n" .
-    "--{$mime_boundary}--\n";
-}
-$toemail="sprigrer.coowner@gmail.com";	
-
-if(mail($toemail, $subject, $email_message, $headers)){
-   $statusMsg= "Email send successfully with attachment";
-}else{
-   $statusMsg= "Not sent";
-}
-}
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
 ?>

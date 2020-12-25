@@ -1,3 +1,66 @@
+<?php
+$statusMsg='';
+if(isset($_FILES["file"]["name"])){
+    $fname=($_POST['fname']);
+    $lname=($_POST['lname']);
+    $email=$_POST['email'];
+    $location=($_POST['location']);
+    $academic=$_POST['academic'];
+    $skill=$_POST['skill'];
+    $avail=($_POST['avail']);
+    $apply=($_POST['apply']);
+    
+$fromemail =  $email;
+$subject="New Registration";
+$email_message = '<h2>Contact Request Submitted</h2>
+                    <p><b>First Name:</b> '.$fname.'</p>
+                    <p><b>Last Name:</b> '.$lname.'</p>
+                    <p><b>Email:</b> '.$email.'</p>
+                    <p><b>Location:</b> '.$location.'</p>
+                    <p><b>Academic:</b> '.$academic.'</p>
+                    <p><b>Skills:</b> '.$skill.'</p>
+                    <p><b>Avaibility:</b> '.$avail.'</p>
+                    <p><b>Apply For:</b><br/>'.$apply.'</p>';
+                    
+$email_message.="Please find the attachment";
+$semi_rand = md5(uniqid(time()));
+$headers = "From: ".$fromemail;
+$mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
+
+    $headers .= "\nMIME-Version: 1.0\n" .
+    "Content-Type: multipart/mixed;\n" .
+    " boundary=\"{$mime_boundary}\"";
+
+if($_FILES["file"]["name"]!= ""){  
+	$strFilesName = $_FILES["file"]["name"];  
+	$strContent = chunk_split(base64_encode(file_get_contents($_FILES["file"]["tmp_name"])));  
+	
+	
+    $email_message .= "This is a multi-part message in MIME format.\n\n" .
+    "--{$mime_boundary}\n" .
+    "Content-Type:text/html; charset=\"iso-8859-1\"\n" .
+    "Content-Transfer-Encoding: 7bit\n\n" .
+    $email_message .= "\n\n";
+
+
+    $email_message .= "--{$mime_boundary}\n" .
+    "Content-Type: application/octet-stream;\n" .
+    " name=\"{$strFilesName}\"\n" .
+    //"Content-Disposition: attachment;\n" .
+    //" filename=\"{$fileatt_name}\"\n" .
+    "Content-Transfer-Encoding: base64\n\n" .
+    $strContent  .= "\n\n" .
+    "--{$mime_boundary}--\n";
+}
+$toemail="sprigrer.coowner@sprigrer.in";	
+
+if(mail($toemail, $subject, $email_message, $headers)){
+   $statusMsg= "Email send successfully with attachment";
+}else{
+   $statusMsg= "Not sent";
+}
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +86,7 @@
         <!-- Header navbar start -->
         <div class="container">
             <nav class="navbar navbar-expand-lg d-flex justify-content-end  text-right text-white pt-3 fixed-top" style="background-color: black; padding-bottom: 20px;">
-                <a class="mr-5 text-white" href="mailto:sprigrer.coowner@gmail.com" style="font-size:18px; margin-right: 55px;"><i class="fa fa-envelope mr-2" aria-hidden="true"></i>sprigrer.coowner@gmail.com</a>
+                <a class="mr-5 text-white" href="mailto:sprigrer.coowner@sprigrer.in" style="font-size:18px; margin-right: 55px;"><i class="fa fa-envelope mr-2" aria-hidden="true"></i>sprigrer.coowner@sprigrer.in</a>
             </nav>
         </div>
 
@@ -106,10 +169,15 @@
                              
                         </div>
                         <div class="col-sm-6">
+                              <!-- Display submission status -->
+                                    <?php if(!empty($statusMsg)){ ?>
+                                        <?php echo'<script>alert("Email sent successfully with attachment")</script>' ?>
+                                    <?php } ?>
                             <div class="row mt-5 ">
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-10 border border-dark ml-5 mr-5" data-aos="slide-up"  data-aos-duration="1000">
-                                    <form action="form1.php" method="post" enctype="multipart/form-data">
+                                   
+                                    <form action="" method="post" enctype="multipart/form-data">
                                         <div class="row">
                                             <div class="col-sm-2"></div>
                                             <div class="col-sm-8">
@@ -182,10 +250,7 @@
                                     </form>
                                 </div>
 
-                            <!-- Display submission status -->
-                                <?php if(!empty($statusMsg)){ ?>
-                                    <p><?php echo $statusMsg; ?></p>
-                                <?php } ?>
+                           
                                 <div class="col-sm-1"></div>
                             </div>
                         </div>
@@ -202,11 +267,11 @@
 				<div class="col-sm-3 mt-5">
                     <div class="ml-5 mr-5">
                         <p class="font-weight-bold text-white " style="font-size: 25px;">Contact Us</p>
-                            <p class="text-white mt-5 p-1" style="font-size:16px;"><i class="fa fa-phone mr-1" aria-hidden="true"></i> (+91) 899-971-2118</p>
-                            <p>
-                                <a href="mailto:sprigrer.coowner@gmail.com" class="text-white p-1" style="font-size:16px;"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> sprigrer.coowner@gmail.com
+                            <p class="mt-5">
+                                <a href="mailto:sprigrer.coowner@sprigrer.in" class="text-white p-1" style="font-size:16px;"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> sprigrer.coowner@sprigrer.in
                                 </a>
                             </p>
+                            <!-- <p class="text-white mt-5 p-1" style="font-size:16px;"><i class="fa fa-phone mr-1" aria-hidden="true"></i> (+91) 899-971-2118</p> -->
                         <p class="font-weight-bold text-white mt-5" style="font-size: 25px;">Follow Us</p>
 
                         <div class="d-flex justify-content-start">
@@ -290,8 +355,7 @@
 
             <div class="row border border-left-0 border-right-0 border-bottom-0 border-top border-dark  pt-4 "  style="background:linear-gradient(to bottom, #0c2748 100%, #0c2748 100%, black 100%">
                 <div class="col-sm-12">
-                    <p class="text-center text-white   font-weight-bolder small">Copyright &copy;  2020 All Right Reserved. Design By Sprigrer Technologies Private Limited
-                    </p>
+                    <p class="text-center text-white   font-weight-bolder small">Copyright &copy;  2020 All Right Reserved. Design By Sprigrer Technologies Private Limited.                </p>
                 </div>
             </div>
          <!-- footer section end -->

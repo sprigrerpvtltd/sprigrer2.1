@@ -23,7 +23,7 @@
         <!-- Header navbar start -->
         <div class="container">
             <nav class="navbar navbar-expand-lg d-flex justify-content-end  text-right text-white pt-3 fixed-top" style="background-color: black; padding-bottom: 20px;">
-                <a class="mr-5 text-white" href="mailto:sprigrer.coowner@gmail.com" style="font-size:18px; margin-right: 55px;"><i class="fa fa-envelope mr-2" aria-hidden="true" ></i>sprigrer.coowner@gmail.com</a>
+                <a class="mr-5 text-white" href="mailto:sprigrer.coowner@sprigrer.in" style="font-size:18px; margin-right: 55px;"><i class="fa fa-envelope mr-2" aria-hidden="true" ></i>sprigrer.coowner@sprigrer.in</a>
             </nav>
         </div>
 
@@ -94,7 +94,7 @@
         <!-- header -section end -->
 
         <!-- our team section start -->
-            <div class="row mt-5 pb-5">
+            <div class="row mt-5 ">
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
                     <div class="row mt-5">
@@ -157,7 +157,7 @@
                                 	<div class="card text-center shadow-sm" style="width: 250px; height: 300px; background: linear-gradient(to bottom, #213f66, #213f66, black);border-radius:10px;">
 										<div class="card-header bg-transparent border-bottom-0">
 											
-                                                <img src="./images/mrunalini.jpeg" class="img-fluid" style="width: 120px;height: 120px; border-radius: 0%; border:5px solid white; margin-top: -80px; ">
+                                                <img src="./images/mrunalini.jpg" class="img-fluid" style="width: 120px;height: 120px; border-radius: 0%; border:5px solid white; margin-top: -80px; ">
 										</div>
 
 										<div class="card-body">
@@ -189,11 +189,12 @@
 				<div class="col-sm-3 mt-5">
                     <div class="ml-5 mr-5">
                         <p class="font-weight-bold text-white " style="font-size: 25px;">Contact Us</p>
-                            <p class="text-white mt-5 p-1" style="font-size:16px;"><i class="fa fa-phone mr-1" aria-hidden="true"></i> (+91) 899-971-2118</p>
-                            <p>
-                                <a href="mailto:sprigrer.coowner@gmail.com" class="text-white p-1" style="font-size:16px;"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> sprigrer.coowner@gmail.com
+                            <p class="mt-5">
+                                <a href="mailto:sprigrer.coowner@sprigrer.in" class="text-white p-1" style="font-size:16px;"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> sprigrer.coowner@sprigrer.in
                                 </a>
                             </p>
+                            <!-- <p class="text-white mt-5 p-1" style="font-size:16px;"><i class="fa fa-phone mr-1" aria-hidden="true"></i> (+91) 899-971-2118</p> -->
+                            
                         <p class="font-weight-bold text-white mt-5" style="font-size: 25px;">Follow Us</p>
 
                         <div class="d-flex justify-content-start">
@@ -277,7 +278,7 @@
 
             <div class="row border border-left-0 border-right-0 border-bottom-0 border-top border-dark  pt-4 "  style="background:linear-gradient(to bottom, #0c2748 100%, #0c2748 100%, black 100%">
                 <div class="col-sm-12">
-                    <p class="text-center text-white   font-weight-bolder small">Copyright &copy;  2020 All Right Reserved. Design By Sprigrer Technologies Private Limited
+                    <p class="text-center text-white   font-weight-bolder small">Copyright &copy;  2020 All Right Reserved. Design By Sprigrer Technologies Private Limited.
                     </p>
                 </div>
             </div>
